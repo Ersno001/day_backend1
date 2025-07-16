@@ -17,5 +17,9 @@ app.use('/api/movies', movieRoutes);
 app.use('/api/user', userRoutes);
 app.use('/webhook', webhookRoutes);
 
+app.get('/', (req, res) => {
+  res.send('https://day-backend1.onrender.com/api');
+});
+
 const PORT = process.env.PORT || 5000;
 app.listen(PORT, () => console.log(`Server running on ${PORT}`));
